@@ -47,19 +47,19 @@ Either way, stop the server afterwards with `Ctrl+C` in the terminal.
 ## Editing from a different computer
 
 The site lives in a git repository on GitHub at
-`https://github.com/Psb2006/FaceForRadio`, so you're not tied to the machine
+`https://github.com/Psb2006/faceforradio`, so you're not tied to the machine
 it was first set up on. To work on it somewhere else:
 
 **1. Get the files onto the new machine**
 
 *Using SourceTree:*
 1. **File → Clone**
-2. Source URL: `https://github.com/Psb2006/FaceForRadio.git`
+2. Source URL: `https://github.com/Psb2006/faceforradio.git`
 3. Pick a destination folder, then **Clone**.
 
 *Using the command line* (e.g. inside VS Code's terminal):
 ```bash
-git clone https://github.com/Psb2006/FaceForRadio.git
+git clone https://github.com/Psb2006/faceforradio.git
 ```
 
 Either way, you'll get a full copy of the site — including the logos and
@@ -69,7 +69,7 @@ photos — since everything is already committed to the repo.
 consistent no matter where you make them)
 
 ```bash
-cd FaceForRadio
+cd faceforradio
 git config user.name "Psb2006"
 git config user.email "patrickb0412@icloud.com"
 ```
