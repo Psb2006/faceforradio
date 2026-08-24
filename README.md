@@ -44,6 +44,63 @@ It'll print a `localhost` address to open.
 
 Either way, stop the server afterwards with `Ctrl+C` in the terminal.
 
+## Editing from a different computer
+
+The site lives in a git repository on GitHub at
+`https://github.com/Psb2006/FaceForRadio`, so you're not tied to the machine
+it was first set up on. To work on it somewhere else:
+
+**1. Get the files onto the new machine**
+
+*Using SourceTree:*
+1. **File → Clone**
+2. Source URL: `https://github.com/Psb2006/FaceForRadio.git`
+3. Pick a destination folder, then **Clone**.
+
+*Using the command line* (e.g. inside VS Code's terminal):
+```bash
+git clone https://github.com/Psb2006/FaceForRadio.git
+```
+
+Either way, you'll get a full copy of the site — including the logos and
+photos — since everything is already committed to the repo.
+
+**2. Set your git identity on that machine** (one-off, so commits stay
+consistent no matter where you make them)
+
+```bash
+cd FaceForRadio
+git config user.name "Psb2006"
+git config user.email "patrickb0412@icloud.com"
+```
+
+In SourceTree, you can set the same thing under its repository/user
+preferences instead of the command line.
+
+**3. Edit, commit, push**
+
+Open the folder in VS Code (or any editor) and edit files as normal — e.g.
+`data/news.json` for a new headline, or any of the `.html` pages. Then:
+
+- **In SourceTree:** the changed files show up under "Unstaged files" — tick
+  them, write a commit message, **Commit**, then **Push**.
+- **On the command line:**
+  ```bash
+  git add -A
+  git commit -m "update news"
+  git push
+  ```
+
+The first time you push from a new machine, it'll prompt you to sign in to
+GitHub (usually opens a browser window) — that's normal.
+
+**4. Wait a minute**
+
+GitHub Pages automatically rebuilds the live site after every push to
+`main`. Give it 30–60 seconds, then refresh
+`https://psb2006.github.io/faceforradio/` (lowercase, even though the repo
+name has capitals — GitHub Pages always lowercases it in the URL).
+
 ## Adding a new Music News item
 
 Open `data/news.json`. It's a list of entries like this:
