@@ -1,0 +1,17 @@
+[
+  {
+    "date": "2026-08-18",
+    "headline": "Replace me with your first headline",
+    "body": "Write a couple of sentences here, same as you'd say them live on air. Keep it short and punchy — this is the text that'll actually show up on the News page."
+  },
+  {
+    "date": "2026-08-18",
+    "headline": "Second headline of the week",
+    "body": "Copy this block, paste it above or below, and fill in a new date, headline and body to add another story. Most recent date shows first automatically."
+  },
+  {
+    "date": "2026-08-18",
+    "headline": "Third headline of the week",
+    "body": "Dates use YYYY-MM-DD format (e.g. 2026-08-18). The site sorts by date, so it doesn't matter what order the entries are in this file."
+  }
+]
