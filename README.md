@@ -144,8 +144,11 @@ you like) to hide it again once the show's back to normal.
 
 ## Updating the logo
 
-The header logo lives at `assets/img/logo-f4r.jpg`, and the CamFM logo in
-the footer lives at `assets/img/logo-camfm.png`. To replace either:
+The header logo lives at `assets/img/logo-f4r-transparent.png` (a
+transparent-background version so it sits cleanly on any colour — the
+original flat photo/JPG version is kept at `assets/img/logo-f4r.jpg` as a
+backup/source), and the CamFM logo in the footer lives at
+`assets/img/logo-camfm.png`. To replace either:
 
 1. Add the new image file to `assets/img/`.
 2. In each HTML file, update the `src` on the matching `<img>` tag — the
