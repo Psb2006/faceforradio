@@ -1,17 +1,17 @@
 [
   {
-    "date": "2026-08-18",
-    "headline": "Replace me with your first headline",
-    "body": "Write a couple of sentences here, same as you'd say them live on air. Keep it short and punchy — this is the text that'll actually show up on the News page."
+    "date": "2026-08-24",
+    "headline": "Apple Music To Add Markers To AI-Generated Tracks, But Putting The Onus on Record Labels",
+    "body": "Apple Music has confirmed it will attach \"Made With AI\" labels to tracks generated on platforms such as Suno. However, the company is shifting the compliance burden onto record labels and distributors, who must supply disclosure metadata themselves"
   },
   {
-    "date": "2026-08-18",
-    "headline": "Second headline of the week",
-    "body": "Copy this block, paste it above or below, and fill in a new date, headline and body to add another story. Most recent date shows first automatically."
+    "date": "2026-08-24",
+    "headline": "Round Hill Music Sues Suno and Anthropic for Up to $1 Billion Each",
+    "body": "Music publisher Round Hill Music has filed copyright infringement lawsuits against AI firms Suno and Anthropic, seeking statutory damages of up to $150,000 per work — potentially totalling close to $1 billion against each company."
   },
   {
-    "date": "2026-08-18",
-    "headline": "Third headline of the week",
-    "body": "Dates use YYYY-MM-DD format (e.g. 2026-08-18). The site sorts by date, so it doesn't matter what order the entries are in this file."
+    "date": "2026-08-24",
+    "headline": "Spotify Board Approves $1.5 Billion Boost to Share Buyback Programme",
+    "body": "Spotify's board has approved a $1.5 billion expansion of its share repurchase programme, taking total buyback capacity to roughly $2.2 billion once the $723 million left from the prior authorisation is included."
   }
 ]
