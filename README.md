@@ -6,14 +6,13 @@ just files you can edit by hand and deploy anywhere that serves static files.
 ## Folder structure
 
 ```
-/index.html          Home page
+/index.html          Home page — includes the Music News list near the bottom
 /about.html           About Patrick / the show
 /listen.html          Show times, listen live, catch up, "not on this week" notice
-/news.html            Full Music News list
 /contact.html         Feedback form, socials
 /assets/css/style.css All styling — colours and fonts are CSS variables at the top
 /assets/js/main.js     Mobile nav menu toggle
-/assets/js/news.js     Loads data/news.json onto the Home and Music News pages
+/assets/js/news.js     Loads data/news.json onto the homepage
 /assets/js/notice.js   Loads data/notice.json onto the Listen page
 /data/news.json        The music news items — edit this to add a new entry
 /data/notice.json      The "not on this week" banner — edit this to switch it on/off
@@ -121,9 +120,12 @@ To add a new item:
 4. Fill in a new `date` (format: `YYYY-MM-DD`), `headline`, and `body`.
 
 You don't need to worry about ordering them — the site always sorts by date,
-most recent first. If the page shows a "couldn't load the news" error, the
-most common cause is a small typo in the JSON (a missing comma or quote mark)
-— any online "JSON validator" tool can point out exactly where.
+most recent first. The homepage only displays the 3 most recent items, so
+once you've added a new one the oldest of the previous three will quietly
+drop off the page (it stays in the file, just isn't shown anywhere). If the
+page shows a "couldn't load the news" error, the most common cause is a
+small typo in the JSON (a missing comma or quote mark) — any online "JSON
+validator" tool can point out exactly where.
 
 ## Adding a "not on this week" notice
 
@@ -149,8 +151,8 @@ the footer lives at `assets/img/logo-camfm.png`. To replace either:
 2. In each HTML file, update the `src` on the matching `<img>` tag — the
    header logo is inside the `<a class="brand">` link near the top, and the
    CamFM logo is inside the "Station" column of the footer.
-   Do this in `index.html`, `about.html`, `listen.html`, `news.html`, and
-   `contact.html` — each page has its own copy of the header and footer.
+   Do this in `index.html`, `about.html`, `listen.html`, and `contact.html`
+   — each page has its own copy of the header and footer.
 
 ## Updating social links
 

@@ -1,6 +1,6 @@
 // Reads /data/news.json and renders it into any element with [data-news-list].
 // Add data-news-limit="3" on the element to show only the N most recent items
-// (used for the homepage teaser). Leave it off to show everything (news.html).
+// (used on the homepage). Leave it off to show everything.
 document.addEventListener("DOMContentLoaded", function () {
   var mount = document.querySelector("[data-news-list]");
   if (!mount) return;
