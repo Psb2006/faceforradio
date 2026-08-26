@@ -188,8 +188,6 @@ most comfortable with — none of them need any special configuration.
 
 ## Known placeholders to fill in before launch
 
-- **Contact email** — `contact.html` has a spot marked for a show email
-  address once you have one; the feedback form works fine without it.
 - **Bluesky** — left out of the site for now until the handle/URL is
   confirmed. Add a `<a class="social-link">` entry next to the Instagram
   links in each footer (and on `contact.html`) once you have it.
