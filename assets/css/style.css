@@ -197,8 +197,9 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 }
 .hero-tag {
   font-family: var(--font-hand);
+  font-weight: 700;
   font-size: 1.5rem;
-  color: var(--colour-orange);
+  color: var(--colour-red);
   display: block;
   margin-bottom: 0.25rem;
 }
