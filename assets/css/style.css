@@ -491,7 +491,7 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 .split-with-photo .split-photo-sm .photo-frame { max-width: 200px; margin: 0 auto; }
 
 /* ---- Now playing phone widget ---- */
-.now-playing-heading {
+.heading-icon {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -519,6 +519,103 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .now-playing-eq span { animation: none; }
+}
+
+/* ---- Other heading icons (same idea as the equaliser, themed per section) ---- */
+.icon-vinyl {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, var(--colour-red) 0 28%, var(--colour-ink) 28% 100%);
+  position: relative;
+  animation: icon-spin 2.6s linear infinite;
+}
+.icon-vinyl::after {
+  content: "";
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+@keyframes icon-spin {
+  to { transform: rotate(360deg); }
+}
+
+.icon-ping-red, .icon-ping-orange, .icon-ping-blue {
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+}
+.icon-ping-red { background: var(--colour-red); animation: icon-ping-red 1.8s ease-out infinite; }
+.icon-ping-orange { background: var(--colour-orange); animation: icon-ping-orange 1.3s ease-out infinite; }
+.icon-ping-blue { background: var(--colour-blue); animation: icon-ping-blue 1.8s ease-out infinite; }
+@keyframes icon-ping-red {
+  0% { box-shadow: 0 0 0 0 rgba(213, 0, 9, 0.5); }
+  70%, 100% { box-shadow: 0 0 0 9px rgba(213, 0, 9, 0); }
+}
+@keyframes icon-ping-orange {
+  0% { box-shadow: 0 0 0 0 rgba(238, 103, 0, 0.55); }
+  70%, 100% { box-shadow: 0 0 0 9px rgba(238, 103, 0, 0); }
+}
+@keyframes icon-ping-blue {
+  0% { box-shadow: 0 0 0 0 rgba(0, 142, 199, 0.5); }
+  70%, 100% { box-shadow: 0 0 0 9px rgba(0, 142, 199, 0); }
+}
+
+.icon-wave {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  transform-origin: 70% 70%;
+  animation: icon-wave-wiggle 2.4s ease-in-out infinite;
+}
+@keyframes icon-wave-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(16deg); }
+  40% { transform: rotate(-8deg); }
+  60% { transform: rotate(16deg); }
+  80% { transform: rotate(0deg); }
+}
+
+.icon-camera {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  animation: icon-shutter 3.6s ease-in-out infinite;
+}
+@keyframes icon-shutter {
+  0%, 90%, 100% { transform: scale(1); filter: brightness(1); }
+  93% { transform: scale(0.82); filter: brightness(1.7); }
+  96% { transform: scale(1); filter: brightness(1); }
+}
+
+.icon-signal {
+  position: relative;
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  background: var(--colour-blue);
+  border-radius: 50%;
+}
+.icon-signal::before, .icon-signal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--colour-blue);
+  animation: icon-signal-wave 2s ease-out infinite;
+  opacity: 0;
+}
+.icon-signal::after { animation-delay: 0.7s; }
+@keyframes icon-signal-wave {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.6); opacity: 0; }
 }
 
 .phone-mockup {
