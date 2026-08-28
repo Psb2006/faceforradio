@@ -395,6 +395,20 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
   transform: translateY(-3px);
   box-shadow: 0 10px 20px -12px rgba(20, 25, 28, 0.35);
 }
+.social-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.social-icon svg { width: 14px; height: 14px; display: block; }
+.social-icon-instagram { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+.social-icon-bluesky { background: #0085ff; }
+.social-icon-musicboard { background: var(--colour-orange); }
+.social-icon-linkedin { background: #0a66c2; }
 
 /* ---- Footer ---- */
 .site-footer {
