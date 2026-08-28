@@ -14,8 +14,11 @@ just files you can edit by hand and deploy anywhere that serves static files.
 /assets/js/main.js     Mobile nav menu toggle
 /assets/js/news.js     Loads data/news.json onto the homepage
 /assets/js/notice.js   Loads data/notice.json onto the Listen page
+/assets/js/nowplaying.js Loads data/nowplaying.json into the "what I've been
+                        listening to" phone widget on the homepage
 /data/news.json        The music news items — edit this to add a new entry
 /data/notice.json      The "not on this week" banner — edit this to switch it on/off
+/data/nowplaying.json  The song/artist/cover shown in the phone widget
 ```
 
 ## Previewing it locally
@@ -141,6 +144,30 @@ Open `data/notice.json`:
 Set `"active"` to `true` and edit the `"message"` text to show a banner at
 the top of the Listen page. Set it back to `false` (or leave the message as
 you like) to hide it again once the show's back to normal.
+
+## Updating "What I've been listening to"
+
+The homepage has a phone-shaped widget showing whatever song you're into
+that week. Open `data/nowplaying.json`:
+
+```json
+{
+  "song": "Replace me with a song title",
+  "artist": "Replace me with the artist name",
+  "albumCover": "assets/img/nowplaying/placeholder-cover.svg"
+}
+```
+
+To update it:
+
+1. Change `"song"` and `"artist"` to whatever you're listening to.
+2. Add the album cover image to `assets/img/nowplaying/` (a square image
+   works best — anything roughly 300×300px or larger) and point
+   `"albumCover"` at it, e.g. `"assets/img/nowplaying/my-song.jpg"`.
+
+The progress bar, timestamps, and playback controls in the widget are just
+decoration (it's not a real, working music player) — only the three fields
+above are meant to be edited.
 
 ## Updating the logo
 

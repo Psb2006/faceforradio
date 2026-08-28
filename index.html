@@ -55,12 +55,48 @@
     </div>
   </section>
 
-  <section class="text-center">
+  <section>
     <div class="container">
-      <figure class="photo-frame tilt-left" style="margin: 0 auto;">
-        <img src="assets/img/photos/live-cavern-club.jpg" alt="Patrick playing bass on stage with his band at a Liverpool venue">
-        <figcaption>My inspiration behind a lot of the show...</figcaption>
-      </figure>
+      <div class="split-with-photo">
+        <div class="split-photo split-photo-sm">
+          <figure class="photo-frame tilt-left">
+            <img src="assets/img/photos/live-cavern-club.jpg" alt="Patrick playing bass on stage with his band at a Liverpool venue">
+            <figcaption>My inspiration behind a lot of the show...</figcaption>
+          </figure>
+        </div>
+        <div class="split-text">
+          <h2 class="now-playing-heading">
+            What I've been listening to at the moment
+            <span class="now-playing-eq" aria-hidden="true"><span></span><span></span><span></span></span>
+          </h2>
+          <div class="phone-mockup" data-now-playing>
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="np-art"><img data-np-cover src="assets/img/nowplaying/placeholder-cover.svg" alt="Album cover"></div>
+                <div class="np-song" data-np-song></div>
+                <div class="np-artist" data-np-artist></div>
+                <div class="np-progress">
+                  <div class="np-progress-fill"></div>
+                  <div class="np-progress-thumb"></div>
+                </div>
+                <div class="np-times"><span>0:01</span><span>-3:47</span></div>
+                <div class="np-controls">
+                  <span aria-hidden="true">⏪</span>
+                  <span class="np-play" aria-hidden="true">▶</span>
+                  <span aria-hidden="true">⏩</span>
+                </div>
+                <div class="np-volume">
+                  <span aria-hidden="true">🔈</span>
+                  <div class="np-volume-track"><div class="np-volume-fill"></div></div>
+                  <span aria-hidden="true">🔊</span>
+                </div>
+              </div>
+              <div class="phone-home-indicator"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -160,5 +196,6 @@
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/news.js"></script>
+<script src="assets/js/nowplaying.js"></script>
 </body>
 </html>
