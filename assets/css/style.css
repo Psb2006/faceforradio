@@ -475,17 +475,19 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 .np-song {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
-  text-transform: none;
-  letter-spacing: normal;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin: 0.8rem 0 0.15rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .np-artist {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -528,6 +530,12 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
   line-height: 1;
 }
 .np-controls .np-play { font-size: 2rem; }
+.np-skip-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: var(--colour-white);
+  display: block;
+}
 .np-volume {
   display: flex;
   align-items: center;
