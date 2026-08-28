@@ -120,11 +120,6 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
   justify-content: space-between;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  transition: padding 0.3s var(--ease);
-}
-.site-header.is-scrolled .container {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
 }
 .brand {
   display: flex;
@@ -133,8 +128,7 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
   text-decoration: none;
   color: var(--colour-ink);
 }
-.brand img { height: 76px; width: auto; transition: height 0.3s var(--ease); }
-.site-header.is-scrolled .brand img { height: 56px; }
+.brand img { height: 76px; width: auto; }
 .brand-wordmark {
   font-family: var(--font-hand);
   font-weight: 700;
@@ -204,7 +198,7 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 }
 
 @media (max-width: 720px) {
-  .brand img, .site-header.is-scrolled .brand img { height: 56px; }
+  .brand img { height: 56px; }
   .nav-toggle { display: inline-block; }
   .main-nav {
     display: none;
