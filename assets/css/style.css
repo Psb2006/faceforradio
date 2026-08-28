@@ -484,6 +484,10 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 .split-with-photo .split-photo.split-photo-sm { flex-basis: 220px; }
 .split-with-photo .split-photo-sm .photo-frame { max-width: 200px; margin: 0 auto; }
 
+/* Three-column variant: phone/heading — free text — photo */
+.now-playing-row.split-with-photo .split-text { flex: 0 1 300px; }
+.now-playing-row .split-mid-text { flex: 1 1 240px; }
+
 /* ---- Now playing phone widget ---- */
 .heading-icon {
   display: flex;
