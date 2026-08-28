@@ -437,7 +437,7 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 .phone-mockup {
   width: 220px;
   max-width: 100%;
-  margin: 1.5rem auto 0;
+  margin: 1.5rem 0 0;
 }
 .phone-frame {
   background: #0e0e10;
