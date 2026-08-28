@@ -487,6 +487,7 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 /* Three-column variant: phone/heading — free text — photo */
 .now-playing-row.split-with-photo .split-text { flex: 0 1 300px; }
 .now-playing-row .split-mid-text { flex: 1 1 240px; }
+.now-playing-row { margin-top: 1rem; }
 
 /* ---- Now playing phone widget ---- */
 .heading-icon {
