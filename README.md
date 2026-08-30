@@ -9,6 +9,7 @@ just files you can edit by hand and deploy anywhere that serves static files.
 /index.html          Home page — includes the Music News list near the bottom
 /about.html           About Patrick / the show
 /listen.html          Show times, listen live, catch up, "not on this week" notice
+/playlists.html        Full archive of every week's playlist
 /contact.html         Feedback form, socials
 /assets/css/style.css All styling — colours and fonts are CSS variables at the top
 /assets/js/main.js     Mobile nav menu toggle
@@ -16,9 +17,12 @@ just files you can edit by hand and deploy anywhere that serves static files.
 /assets/js/notice.js   Loads data/notice.json onto the Listen page
 /assets/js/nowplaying.js Loads data/nowplaying.json into the "what I've been
                         listening to" phone widget on the homepage
+/assets/js/playlists.js Loads data/playlists.json onto the homepage teaser
+                        and the Playlists page
 /data/news.json        The music news items — edit this to add a new entry
 /data/notice.json      The "not on this week" banner — edit this to switch it on/off
 /data/nowplaying.json  The song/artist/cover shown in the phone widget
+/data/playlists.json   Every week's tracklist, plus Spotify/Apple Music links
 ```
 
 ## Previewing it locally
@@ -168,6 +172,52 @@ To update it:
 The progress bar, timestamps, and playback controls in the widget are just
 decoration (it's not a real, working music player) — only the three fields
 above are meant to be edited.
+
+## Adding a new week's playlist
+
+Open `data/playlists.json`. It's a list of entries like this:
+
+```json
+{
+  "number": 13,
+  "date": "2026-06-16",
+  "tracks": [
+    "Another Nail in My Heart - Squeeze",
+    "Leave You - Vulfmon & Jackie Evans"
+  ],
+  "spotifyUrl": "",
+  "appleMusicUrl": ""
+}
+```
+
+To add this week's playlist:
+
+1. Copy one whole `{ ... }` block (including the curly braces).
+2. Paste it above or below an existing one, and add a comma after the closing
+   `}` of whichever block comes first.
+3. Update `"number"` (the playlist number you'd use on Instagram) and
+   `"date"` (format: `YYYY-MM-DD`, the Tuesday the show aired).
+4. Replace the `"tracks"` list with each song from that week, one per line,
+   in the order they were played — same as you'd type them for the
+   Instagram graphic.
+5. If you've made a shared playlist on Spotify and/or Apple Music, paste the
+   share link into `"spotifyUrl"` and/or `"appleMusicUrl"`. Leave either (or
+   both) as `""` if you haven't made one yet — the site simply won't show
+   that button until a link is added.
+
+You don't need to worry about ordering the entries in the file — the site
+always sorts by date, most recent first. The homepage shows a short preview
+of the latest playlist with a link through to the full archive at
+`playlists.html`, which lists every playlist in full. If the page shows a
+"couldn't load the playlists" error, the most common cause is a small typo
+in the JSON (a missing comma or quote mark) — any online "JSON validator"
+tool can point out exactly where.
+
+**Getting a Spotify share link:** build the playlist in the Spotify app →
+tap the three dots (•••) → **Share** → **Copy Link to Playlist**.
+
+**Getting an Apple Music share link:** build the playlist in the Music app →
+tap the three dots (•••) → **Share Playlist** → **Copy Link**.
 
 ## Updating the logo
 

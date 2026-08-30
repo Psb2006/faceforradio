@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Listen — A Face For Radio</title>
-<meta name="description" content="How to listen to A Face For Radio live on CamFM 97.2, Tuesdays 9–10am, and how to catch up on past episodes.">
+<title>Playlists — A Face For Radio</title>
+<meta name="description" content="Every playlist from A Face For Radio on CamFM 97.2 — the full tracklist from each week's show, with links to listen along on Spotify and Apple Music.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Saira+Extra+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -29,58 +29,27 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="listen.html" aria-current="page">Listen</a></li>
-        <li><a href="playlists.html">Playlists</a></li>
+        <li><a href="listen.html">Listen</a></li>
+        <li><a href="playlists.html" aria-current="page">Playlists</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="notice-banner" data-notice-banner></div>
-
 <main id="main">
 
   <section class="hero">
     <div class="container">
-      <span class="hero-tag">Tune in</span>
-      <h1>Listen</h1>
-      <p class="lede">Live every Tuesday, 9–10am, on CamFM 97.2. Missed it? It's on catch-up straight after.</p>
+      <span class="hero-tag">Every track, every week</span>
+      <h1>Playlists</h1>
+      <p class="lede">The full tracklist from every show, in the order it was played. Save the ones you like, or listen along on Spotify and Apple Music where a link's up.</p>
     </div>
   </section>
 
   <section>
     <div class="container reveal">
-      <div class="card-row">
-        <div class="teaser-card">
-          <h3>Listen live</h3>
-          <p>Tune in on 97.2FM around Cambridge, or stream it live from anywhere on the CamFM website, every Tuesday 9–10am.</p>
-          <a class="btn btn-primary" href="https://www.camfm.co.uk/" target="_blank" rel="noopener">Listen live on CamFM →</a>
-        </div>
-        <div class="teaser-card">
-          <h3>Catch up</h3>
-          <p>Can't make 9am on a Tuesday? No judgement. Every episode goes up on the CamFM show page afterwards.</p>
-          <a class="btn btn-secondary" href="https://www.camfm.co.uk/shows/a-face-for-radio/" target="_blank" rel="noopener">Catch-up episodes →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-alt">
-    <div class="container reveal">
-      <div class="split-with-photo">
-        <div class="split-text">
-          <h2 class="heading-icon">Regular slot <span class="icon-signal" aria-hidden="true"></span></h2>
-          <p><strong>Every Tuesday, 9:00–10:00am</strong>, UK time, on CamFM 97.2.</p>
-          <p>Occasionally the show doesn't run as usual — reading weeks, holidays, or Patrick oversleeping (it happens). If that's the case this week, you'll see a note at the top of this page.</p>
-        </div>
-        <div class="split-photo">
-          <figure class="photo-frame tilt-right">
-            <img src="assets/img/photos/live-desk-solo.jpg" alt="Patrick at the CamFM mixing desk during the show">
-            <figcaption>Five minutes to air, still fiddling with the desk</figcaption>
-          </figure>
-        </div>
-      </div>
+      <div data-playlist-list></div>
     </div>
   </section>
 
@@ -127,6 +96,6 @@
 <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
 
 <script src="assets/js/main.js"></script>
-<script src="assets/js/notice.js"></script>
+<script src="assets/js/playlists.js"></script>
 </body>
 </html>
