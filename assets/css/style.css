@@ -384,6 +384,7 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
 }
 .notice-photo-btn {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -395,6 +396,25 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
   transform: scale(1.08);
 }
 .notice-photo-btn:focus-visible { outline: 2px solid var(--colour-blue); outline-offset: 2px; }
+.notice-photo-zoom {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(20, 25, 28, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s var(--ease), background-color 0.25s var(--ease);
+}
+.notice-photo-zoom svg { width: 14px; height: 14px; }
+.notice-photo-btn:hover .notice-photo-zoom, .notice-photo-btn:focus-visible .notice-photo-zoom {
+  background-color: var(--colour-blue);
+  transform: scale(1.15);
+}
 .notice-item-text { flex: 1 1 auto; min-width: 0; }
 .notice-item-text h3 { margin-bottom: 0.3em; }
 

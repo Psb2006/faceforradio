@@ -57,6 +57,9 @@ function renderNotices(mount, items) {
             '" alt="' +
             escapeHtml(item.title || "") +
             '">' +
+            '<span class="notice-photo-zoom" aria-hidden="true">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="10" y1="7.5" x2="10" y2="12.5"/><line x1="7.5" y1="10" x2="12.5" y2="10"/></svg>' +
+            "</span>" +
             "</button>" +
             "</div>"
           : "") +
