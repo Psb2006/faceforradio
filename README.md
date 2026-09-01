@@ -15,12 +15,15 @@ just files you can edit by hand and deploy anywhere that serves static files.
 /assets/js/main.js     Mobile nav menu toggle
 /assets/js/news.js     Loads data/news.json onto the homepage
 /assets/js/notice.js   Loads data/notice.json onto the Listen page
+/assets/js/notices.js  Loads data/notices.json into the Notices section on the About page
 /assets/js/nowplaying.js Loads data/nowplaying.json into the "what I've been
                         listening to" phone widget on the homepage
 /assets/js/playlists.js Loads data/playlists.json onto the homepage teaser
                         and the Playlists page
 /data/news.json        The music news items — edit this to add a new entry
 /data/notice.json      The "not on this week" banner — edit this to switch it on/off
+/data/notices.json     Face For Radio-specific updates shown in the About page's
+                        Notices section — not the same file as notice.json above
 /data/nowplaying.json  The song/artist/cover shown in the phone widget
 /data/playlists.json   Every week's tracklist, plus Spotify/Apple Music links
 ```
@@ -148,6 +151,39 @@ Open `data/notice.json`:
 Set `"active"` to `true` and edit the `"message"` text to show a banner at
 the top of the Listen page. Set it back to `false` (or leave the message as
 you like) to hide it again once the show's back to normal.
+
+## Adding a Notice to the About page
+
+The About page has a "Notices" section (between "Hi, I'm Patrick" and "Off
+air") for anything Face For Radio-specific — schedule changes, one-off
+specials, whatever's worth flagging. Open `data/notices.json`. It's a list
+of entries like this:
+
+```json
+{
+  "date": "2026-09-01",
+  "title": "Replace me with your first notice",
+  "body": "A sentence or two about what's changed.",
+  "image": ""
+}
+```
+
+To add a new notice:
+
+1. Copy one whole `{ ... }` block (including the curly braces).
+2. Paste it above or below an existing one, and add a comma after the
+   closing `}` of whichever block comes first.
+3. Fill in a new `date` (format: `YYYY-MM-DD`), `title`, and `body`.
+4. If you want a photo with it, add the image to `assets/img/notices/`
+   and point `"image"` at it, e.g. `"assets/img/notices/my-photo.jpg"`.
+   Leave `"image"` as `""` for a text-only notice.
+
+You don't need to worry about ordering the entries — the site always sorts
+by date, most recent first, and every notice stays visible (there's no
+"most recent 3" limit like the homepage news list). If the page shows a
+"couldn't load the notices" error, the most common cause is a small typo
+in the JSON (a missing comma or quote mark) — any online "JSON validator"
+tool can point out exactly where.
 
 ## Updating "What I've been listening to"
 

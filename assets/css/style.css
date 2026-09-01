@@ -210,6 +210,8 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
   .main-nav.is-open { display: block; }
   .main-nav ul { flex-direction: column; gap: 0; padding: 0.5rem 1.25rem 1rem; }
   .main-nav a { display: block; padding: 0.6em 0; }
+  .notice-item.has-image { flex-wrap: wrap; }
+  .notice-item-photo { flex-basis: 100%; width: 100%; height: 180px; }
 }
 
 /* ---- Hero ---- */
@@ -348,6 +350,39 @@ section { padding: 3rem 0; scroll-margin-top: 80px; }
   text-align: center;
   color: var(--colour-ink-soft);
 }
+
+/* ---- Notices ---- */
+.notice-list { list-style: none; margin: 2rem 0 0; padding: 0; }
+.notice-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--colour-border);
+  padding: 1.6rem 1rem;
+  margin: 0 -1rem;
+  border-radius: 8px;
+  transition: background-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.notice-item:first-child { padding-top: 0.4rem; }
+.notice-item:hover {
+  background-color: var(--colour-white);
+  transform: translateX(4px);
+}
+.notice-item-photo {
+  flex: 0 0 130px;
+  width: 130px;
+  height: 130px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.notice-item-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.notice-item-text { flex: 1 1 auto; min-width: 0; }
+.notice-item-text h3 { margin-bottom: 0.3em; }
 
 /* ---- Cards / teasers ---- */
 .card-row {
