@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-08-29",
+    "headline": "Sony Music Publishing and Warner Chappell Sue Anthropic Over AI Training",
+    "body": "Sony Music Publishing and Warner Chappell Music have filed a copyright lawsuit against Anthropic, alleging the AI firm illegally scraped and used tens of thousands of copyrighted songs to train its Claude models. The publishers are seeking statutory damages that could reach billions of dollars."
+  },
+  {
+    "date": "2026-08-25",
+    "headline": "Trump Reportedly Told DOJ To Settle Live Nation Antitrust Case After Oval Office Meeting",
+    "body": "A Wall Street Journal report reveals that President Trump directed the Department of Justice to settle its antitrust suit against Live Nation shortly after an Oval Office meeting with CEO Michael Rapino, raising fresh questions over how the settlement was reached."
+  },
+  {
     "date": "2026-08-24",
     "headline": "Apple Music To Add Markers To AI-Generated Tracks, But Putting The Onus on Record Labels",
     "body": "Apple Music has confirmed it will attach \"Made With AI\" labels to tracks generated on platforms such as Suno. However, the company is shifting the compliance burden onto record labels and distributors, who must supply disclosure metadata themselves"
@@ -13,5 +23,10 @@
     "date": "2026-08-24",
     "headline": "Spotify Board Approves $1.5 Billion Boost to Share Buyback Programme",
     "body": "Spotify's board has approved a $1.5 billion expansion of its share repurchase programme, taking total buyback capacity to roughly $2.2 billion once the $723 million left from the prior authorisation is included."
+  },
+  {
+    "date": "2026-08-19",
+    "headline": "Universal Music Group and Apple Corps Strike Global Beatles Merchandising Deal",
+    "body": "The Beatles' Apple Corps has signed a new long-term partnership with Universal Music Group covering worldwide merchandising, licensing and e-commerce, ahead of a planned Savile Row fan experience and a four-part biopic series due in 2027 and 2028."
   }
 ]
