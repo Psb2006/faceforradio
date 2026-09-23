@@ -1,17 +1,47 @@
 [
   {
-    "date": "2026-08-18",
-    "headline": "Replace me with your first headline",
-    "body": "Write a couple of sentences here, same as you'd say them live on air. Keep it short and punchy — this is the text that'll actually show up on the News page."
+    "date": "2026-09-22",
+    "headline": "Sanremo Music Festival Sets Strict New Rules on AI-Assisted Songs",
+    "body": "Italy's Sanremo Music Festival has published rules for its 2027 edition requiring competing songs to remain an expression of human creativity, barring AI from replacing or distorting an artist's creative contribution. Organisers reserve the right to use technological means to check entries for undisclosed AI use."
   },
   {
-    "date": "2026-08-18",
-    "headline": "Second headline of the week",
-    "body": "Copy this block, paste it above or below, and fill in a new date, headline and body to add another story. Most recent date shows first automatically."
+    "date": "2026-09-21",
+    "headline": "Avatar Concert Firm Unit1 Studio Raises £20 Million to Scale Touring Tech",
+    "body": "UK-based mixed-reality concert producer Unit1 Studio has raised £20 million ($26.7 million) in a round led by Balderton Capital, with backing from Mercuri, Gilston Music and artist manager Paul McGuinness. The funding will help the firm make its avatar-based concert productions cheaper and faster to move between venues."
   },
   {
-    "date": "2026-08-18",
-    "headline": "Third headline of the week",
-    "body": "Dates use YYYY-MM-DD format (e.g. 2026-08-18). The site sorts by date, so it doesn't matter what order the entries are in this file."
+    "date": "2026-09-18",
+    "headline": "Sony Music and Universal Music Group Sue Suno Again Over New v6 Model",
+    "body": "Sony Music and Universal Music Group have filed a fresh copyright lawsuit against Suno, alleging its new v6 model still \"launders\" infringing output from earlier models despite being trained on licensed catalogue from other labels. It is the second suit the labels have brought against the AI music generator in just over two years."
+  },
+  {
+    "date": "2026-08-29",
+    "headline": "Sony Music Publishing and Warner Chappell Sue Anthropic Over AI Training",
+    "body": "Sony Music Publishing and Warner Chappell Music have filed a copyright lawsuit against Anthropic, alleging the AI firm illegally scraped and used tens of thousands of copyrighted songs to train its Claude models. The publishers are seeking statutory damages that could reach billions of dollars."
+  },
+  {
+    "date": "2026-08-25",
+    "headline": "Trump Reportedly Told DOJ To Settle Live Nation Antitrust Case After Oval Office Meeting",
+    "body": "A Wall Street Journal report reveals that President Trump directed the Department of Justice to settle its antitrust suit against Live Nation shortly after an Oval Office meeting with CEO Michael Rapino, raising fresh questions over how the settlement was reached."
+  },
+  {
+    "date": "2026-08-24",
+    "headline": "Apple Music To Add Markers To AI-Generated Tracks, But Putting The Onus on Record Labels",
+    "body": "Apple Music has confirmed it will attach \"Made With AI\" labels to tracks generated on platforms such as Suno. However, the company is shifting the compliance burden onto record labels and distributors, who must supply disclosure metadata themselves"
+  },
+  {
+    "date": "2026-08-24",
+    "headline": "Round Hill Music Sues Suno and Anthropic for Up to $1 Billion Each",
+    "body": "Music publisher Round Hill Music has filed copyright infringement lawsuits against AI firms Suno and Anthropic, seeking statutory damages of up to $150,000 per work — potentially totalling close to $1 billion against each company."
+  },
+  {
+    "date": "2026-08-24",
+    "headline": "Spotify Board Approves $1.5 Billion Boost to Share Buyback Programme",
+    "body": "Spotify's board has approved a $1.5 billion expansion of its share repurchase programme, taking total buyback capacity to roughly $2.2 billion once the $723 million left from the prior authorisation is included."
+  },
+  {
+    "date": "2026-08-19",
+    "headline": "Universal Music Group and Apple Corps Strike Global Beatles Merchandising Deal",
+    "body": "The Beatles' Apple Corps has signed a new long-term partnership with Universal Music Group covering worldwide merchandising, licensing and e-commerce, ahead of a planned Savile Row fan experience and a four-part biopic series due in 2027 and 2028."
   }
 ]
