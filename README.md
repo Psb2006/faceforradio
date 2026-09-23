@@ -6,17 +6,26 @@ just files you can edit by hand and deploy anywhere that serves static files.
 ## Folder structure
 
 ```
-/index.html          Home page
+/index.html          Home page — includes the Music News list near the bottom
 /about.html           About Patrick / the show
 /listen.html          Show times, listen live, catch up, "not on this week" notice
-/news.html            Full Music News list
+/playlists.html        Full archive of every week's playlist
 /contact.html         Feedback form, socials
 /assets/css/style.css All styling — colours and fonts are CSS variables at the top
 /assets/js/main.js     Mobile nav menu toggle
-/assets/js/news.js     Loads data/news.json onto the Home and Music News pages
+/assets/js/news.js     Loads data/news.json onto the homepage
 /assets/js/notice.js   Loads data/notice.json onto the Listen page
+/assets/js/notices.js  Loads data/notices.json into the Notices section on the About page
+/assets/js/nowplaying.js Loads data/nowplaying.json into the "what I've been
+                        listening to" phone widget on the homepage
+/assets/js/playlists.js Loads data/playlists.json onto the homepage teaser
+                        and the Playlists page
 /data/news.json        The music news items — edit this to add a new entry
 /data/notice.json      The "not on this week" banner — edit this to switch it on/off
+/data/notices.json     Face For Radio-specific updates shown in the About page's
+                        Notices section — not the same file as notice.json above
+/data/nowplaying.json  The song/artist/cover shown in the phone widget
+/data/playlists.json   Every week's tracklist, plus Spotify/Apple Music links
 ```
 
 ## Previewing it locally
@@ -121,9 +130,12 @@ To add a new item:
 4. Fill in a new `date` (format: `YYYY-MM-DD`), `headline`, and `body`.
 
 You don't need to worry about ordering them — the site always sorts by date,
-most recent first. If the page shows a "couldn't load the news" error, the
-most common cause is a small typo in the JSON (a missing comma or quote mark)
-— any online "JSON validator" tool can point out exactly where.
+most recent first. The homepage only displays the 3 most recent items, so
+once you've added a new one the oldest of the previous three will quietly
+drop off the page (it stays in the file, just isn't shown anywhere). If the
+page shows a "couldn't load the news" error, the most common cause is a
+small typo in the JSON (a missing comma or quote mark) — any online "JSON
+validator" tool can point out exactly where.
 
 ## Adding a "not on this week" notice
 
@@ -140,17 +152,123 @@ Set `"active"` to `true` and edit the `"message"` text to show a banner at
 the top of the Listen page. Set it back to `false` (or leave the message as
 you like) to hide it again once the show's back to normal.
 
+## Adding a Notice to the About page
+
+The About page has a "Notices" section (between "Hi, I'm Patrick" and "Off
+air") for anything Face For Radio-specific — schedule changes, one-off
+specials, whatever's worth flagging. Open `data/notices.json`. It's a list
+of entries like this:
+
+```json
+{
+  "date": "2026-09-01",
+  "title": "Replace me with your first notice",
+  "body": "A sentence or two about what's changed.",
+  "image": ""
+}
+```
+
+To add a new notice:
+
+1. Copy one whole `{ ... }` block (including the curly braces).
+2. Paste it above or below an existing one, and add a comma after the
+   closing `}` of whichever block comes first.
+3. Fill in a new `date` (format: `YYYY-MM-DD`), `title`, and `body`.
+4. If you want a photo with it, add the image to `assets/img/notices/`
+   and point `"image"` at it, e.g. `"assets/img/notices/my-photo.jpg"`.
+   Leave `"image"` as `""` for a text-only notice.
+
+You don't need to worry about ordering the entries — the site always sorts
+by date, most recent first, and every notice stays visible (there's no
+"most recent 3" limit like the homepage news list). If the page shows a
+"couldn't load the notices" error, the most common cause is a small typo
+in the JSON (a missing comma or quote mark) — any online "JSON validator"
+tool can point out exactly where.
+
+## Updating "What I've been listening to"
+
+The homepage has a phone-shaped widget showing whatever song you're into
+that week. Open `data/nowplaying.json`:
+
+```json
+{
+  "song": "Replace me with a song title",
+  "artist": "Replace me with the artist name",
+  "albumCover": "assets/img/nowplaying/placeholder-cover.svg"
+}
+```
+
+To update it:
+
+1. Change `"song"` and `"artist"` to whatever you're listening to.
+2. Add the album cover image to `assets/img/nowplaying/` (a square image
+   works best — anything roughly 300×300px or larger) and point
+   `"albumCover"` at it, e.g. `"assets/img/nowplaying/my-song.jpg"`.
+
+The progress bar, timestamps, and playback controls in the widget are just
+decoration (it's not a real, working music player) — only the three fields
+above are meant to be edited.
+
+## Adding a new week's playlist
+
+Open `data/playlists.json`. It's a list of entries like this:
+
+```json
+{
+  "number": 13,
+  "date": "2026-06-16",
+  "tracks": [
+    "Another Nail in My Heart - Squeeze",
+    "Leave You - Vulfmon & Jackie Evans"
+  ],
+  "spotifyUrl": "",
+  "appleMusicUrl": ""
+}
+```
+
+To add this week's playlist:
+
+1. Copy one whole `{ ... }` block (including the curly braces).
+2. Paste it above or below an existing one, and add a comma after the closing
+   `}` of whichever block comes first.
+3. Update `"number"` (the playlist number you'd use on Instagram) and
+   `"date"` (format: `YYYY-MM-DD`, the Tuesday the show aired).
+4. Replace the `"tracks"` list with each song from that week, one per line,
+   in the order they were played — same as you'd type them for the
+   Instagram graphic.
+5. If you've made a shared playlist on Spotify and/or Apple Music, paste the
+   share link into `"spotifyUrl"` and/or `"appleMusicUrl"`. Leave either (or
+   both) as `""` if you haven't made one yet — the site simply won't show
+   that button until a link is added.
+
+You don't need to worry about ordering the entries in the file — the site
+always sorts by date, most recent first. The homepage shows a short preview
+of the latest playlist with a link through to the full archive at
+`playlists.html`, which lists every playlist in full. If the page shows a
+"couldn't load the playlists" error, the most common cause is a small typo
+in the JSON (a missing comma or quote mark) — any online "JSON validator"
+tool can point out exactly where.
+
+**Getting a Spotify share link:** build the playlist in the Spotify app →
+tap the three dots (•••) → **Share** → **Copy Link to Playlist**.
+
+**Getting an Apple Music share link:** build the playlist in the Music app →
+tap the three dots (•••) → **Share Playlist** → **Copy Link**.
+
 ## Updating the logo
 
-The header logo lives at `assets/img/logo-f4r.jpg`, and the CamFM logo in
-the footer lives at `assets/img/logo-camfm.png`. To replace either:
+The header logo lives at `assets/img/logo-f4r-transparent.png` (a
+transparent-background version so it sits cleanly on any colour — the
+original flat photo/JPG version is kept at `assets/img/logo-f4r.jpg` as a
+backup/source), and the CamFM logo in the footer lives at
+`assets/img/logo-camfm.png`. To replace either:
 
 1. Add the new image file to `assets/img/`.
 2. In each HTML file, update the `src` on the matching `<img>` tag — the
    header logo is inside the `<a class="brand">` link near the top, and the
    CamFM logo is inside the "Station" column of the footer.
-   Do this in `index.html`, `about.html`, `listen.html`, `news.html`, and
-   `contact.html` — each page has its own copy of the header and footer.
+   Do this in `index.html`, `about.html`, `listen.html`, and `contact.html`
+   — each page has its own copy of the header and footer.
 
 ## Updating social links
 
@@ -183,8 +301,6 @@ most comfortable with — none of them need any special configuration.
 
 ## Known placeholders to fill in before launch
 
-- **Contact email** — `contact.html` has a spot marked for a show email
-  address once you have one; the feedback form works fine without it.
 - **Bluesky** — left out of the site for now until the handle/URL is
   confirmed. Add a `<a class="social-link">` entry next to the Instagram
   links in each footer (and on `contact.html`) once you have it.
